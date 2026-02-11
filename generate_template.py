@@ -7,7 +7,7 @@ def create_empty_university_template(filename="university_grades_template.xlsx")
     """
     
     columns = [
-        "Факультет",
+        "Направление",
         "Учебный_год",
         "Курс",
         "Группа",
@@ -31,4 +31,5 @@ def create_empty_university_template(filename="university_grades_template.xlsx")
 
 if __name__ == "__main__":
     create_empty_university_template()
+
     
