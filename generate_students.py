@@ -61,7 +61,7 @@ def generate_university_data(filename="university_grades.xlsx"):
                                 max(grade, 40)
                             ])
 
-    df = pd.DataFrame(all_data, columns=["Факультет", "Учебный_год", "Курс", "Группа", "Студент", "Предмет", "Итоговая_оценка"])
+    df = pd.DataFrame(all_data, columns=["Направление", "Учебный_год", "Курс", "Группа", "Студент", "Предмет", "Итоговая_оценка"])
     df = df.drop_duplicates()
     df = df.sort_values(["Учебный_год", "Курс", "Группа"])
     
@@ -71,4 +71,5 @@ def generate_university_data(filename="university_grades.xlsx"):
     print(f"Текущий срез (25/26): {len(df[df['Учебный_год']=='2025/2026'])} записей.")
 
 if __name__ == "__main__":
+
     generate_university_data()
